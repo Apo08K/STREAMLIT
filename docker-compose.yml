@@ -1,0 +1,7 @@
+services:  #docker-compose creates the docker image using the docker file, right click and use compose up
+  streamlit:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    ports:
+      - "8081:8501" #post port can be 8081 or 8080 and the container port has to be 8501(as that's where the code is exposed)
